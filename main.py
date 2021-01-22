@@ -10,9 +10,17 @@ from sklearn.naive_bayes import MultinomialNB
 
 #Murat Dogan
 
+#dataset
 dataset = pd.read_csv("dataset.csv")
-labels = dataset.label
 
+#visualization
+dataset.groupby(["label"])["text"].count().plot(kind="bar")
+plt.savefig("labelscount.pdf")
+plt.title("How many fake an real names we have")
+plt.close()
+
+#train test
+labels = dataset.label
 X_train, X_test, y_train, y_test = train_test_split(dataset['text'], labels,
                                                     test_size=0.3, random_state=10)
 
@@ -66,9 +74,11 @@ plt.close()
 #fake news words
 feature_names = tfidf.get_feature_names()
 datas = sorted(zip(clf.coef_[0], feature_names))[:30]
+print("----------------------------------------------")
+print("Best accuracy score algorithm used for visualization of result")
 for coef, words in datas:
     print(coef, words,"FAKE")
-
+print("----------------------------------------------")
 
 #Applying Passive Aggressive Classifier with count
 clf = PassiveAggressiveClassifier()
