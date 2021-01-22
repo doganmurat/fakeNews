@@ -13,6 +13,7 @@ main.py - Main file<br/>
 dataset.csv - The dataset file being worked<br/>
 .pdf files - Figures<br/>
 .idea - PyCharm project-specific settings folder.
+report - report folder with figures
 
 ## Project Language, Version
 Python 3.8<br/>
