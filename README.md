@@ -9,11 +9,11 @@ The project goal is ways to detect fake news using collected data from different
 Murat Dogan
 
 ## Structure
-main.py - Main file
-dataset.csv - The dataset file being worked
-.pdf files - Figures
+main.py - Main file<br/>
+dataset.csv - The dataset file being worked<br/>
+.pdf files - Figures<br/>
 .idea - PyCharm project-specific settings folder.
 
 ## Project Language, Version
-Python 3.8
+Python 3.8<br/>
 main.py - Main file
